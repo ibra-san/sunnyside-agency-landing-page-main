@@ -1,40 +1,160 @@
-$main-background-color: red;
+/*Variables*/
+$SoftRed: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%); 
+$DarkSaturatedCyan: hsl(167, 40%, 24%);
+$DarkBlue: hsl(198, 62%, 26%); 
+$DarkModerateCyan: hsl(168, 34%, 41%);
+$VeryDarkBlue: hsl(212, 27%, 19%);
+$VeryGrayishBlue: hsl(213, 9%, 39%); 
+$DarkGrayishBlue:hsl(232, 10%, 55%);
+$GrayishBlue: hsl(210, 4%, 67%); 
+$White: hsl(0, 0%, 100%);
+$DefaultFontSize: 18px;
 
-.App {
-  text-align: center;
+
+/* Importing fonts from google fonts*/ 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Dela+Gothic+One&family=Dosis:wght@200;300;400;500;600;700;800&family=Epilogue:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Hurricane&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inspiration&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Karla:wght@200;300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:wght@200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Oxygen:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Red+Hat+Mono:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*Fonts to be used
+
+    font-family: 'Barlow', sans-serif;
+
+    font-family: 'Dela Gothic One', cursive;
+
+    font-family: 'Dosis', sans-serif;
+
+    font-family: 'Epilogue', sans-serif;
+
+    font-family: 'Fraunces', serif;
+
+    font-family: 'Heebo', sans-serif;
+
+    font-family: 'Hurricane', cursive;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+
+    font-family: 'Inconsolata', monospace;
+
+    font-family: 'Inspiration', cursive;
+
+    font-family: 'Josefin Sans', sans-serif;
+
+    font-family: 'Karla', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+
+    font-family: 'Libre Baskerville', serif;
+
+    font-family: 'Lora', serif;
+
+    font-family: 'M PLUS 1', sans-serif;
+
+    font-family: 'Merriweather', serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Mukta', sans-serif;
+
+    font-family: 'Mulish', sans-serif;
+
+    font-family: 'Noto Serif', serif;
+
+    font-family: 'Nunito', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-family: 'Oxygen', sans-serif;
+
+    font-family: 'Playfair Display', serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Red Hat Mono', monospace;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+
+    font-family: 'Source Code Pro', monospace;
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    font-family: 'Titillium Web', sans-serif;
+
+    font-family: 'Work Sans', sans-serif;
+
+
+*/
+
+* { 
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App { 
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: 'Barlow', sans-serif;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+  .Headerimg { 
+  width: 100vw;
+  }
+
+  .Navbar { 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 99%;
+    border: 2px solid green;
+    height: 50px;
+
+    .LeftSide { 
+      min-width: 60%;
+      color: $White;
+      font-size: 32px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 900;
+      margin-left: 15px;
+      height: 100%;
+      border: 2px solid gold;
+    }
+
+    .RightSide__Menu { 
+      border: 2px solid blue;
+      height: 100%;
+      width: 40%;
+      color: $White;
+      font-weight: 600;
+      font-size: 18px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      #Contact { 
+        
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: $DarkBlue;
+        background-color: $White;
+        border-radius: 2rem;
+        font-weight: 700;
+        font-family: 'Fraunces', serif;
+        
+
+      }
+    }
   }
 }
 
-.App-header {
-  background-color: $main-background-color;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
