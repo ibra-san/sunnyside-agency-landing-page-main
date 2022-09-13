@@ -197,5 +197,25 @@ $DefaultFontSize: 18px;
       }
     }
   }
+
+
+  .Section1, .Section2{ 
+    margin-top: -3px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    
+    &__Text { 
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__Img {
+      width: 50vw;
+    }
+  }
 }
 

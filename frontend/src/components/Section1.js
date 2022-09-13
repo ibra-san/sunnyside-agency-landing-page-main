@@ -9,7 +9,7 @@ function Section1() {
         <div className='Section1__Text--Button'>Learn more</div>
       </div>
 
-      <picture>
+      <picture className='Section1__Pic'>
         <source className="Section1__Img" media="(max-width: 450px)" srcset="images/mobile/image-transform.jpg" alt="Egg reflection" />
         <img className="Section1__Img" src="images/desktop/image-transform.jpg" alt="Egg reflection" />
       </picture>
