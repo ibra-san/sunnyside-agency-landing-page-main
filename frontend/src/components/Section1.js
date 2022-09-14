@@ -6,7 +6,7 @@ function Section1() {
       <div className='Section1__Text'>
         <h1 className='Section1__Text--Title'>Transform your brand</h1>
         <p className='Section1__Text--Body'>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <div className='Section1__Text--Button'>Learn more</div>
+        <div className='Section1__Text--Button'> <span></span> LEARN MORE  </div>
       </div>
 
       <picture className='Section1__Pic'>
