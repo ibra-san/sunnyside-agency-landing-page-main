@@ -11,7 +11,7 @@ function Section2() {
       <div className='Section2__Text'>
         <h1 className='Section2__Text--Title'>Stand out to the right audience </h1>
         <p className='Section2__Text--Body'>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-        <div className='Section2__Text--Button'>LEARN MORE <span></span></div>
+        <div className='Section2__Text--Button' id='s2__button'><span>LEARN MORE</span></div>
       </div>
     </section>
   )
