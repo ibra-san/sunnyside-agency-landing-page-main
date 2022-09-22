@@ -3,7 +3,7 @@ import React from 'react'
 function Section4() {
   return (
     <div className='Section4'>
-      <h1 className='Section4__Title'>Client testimonials</h1>
+      <h1 className='Section4__Title'>CLIENT TESTIMONIALS</h1>
 
       <div className='Section4__Client'>
         <div className='Section4__Client--Emily'>
