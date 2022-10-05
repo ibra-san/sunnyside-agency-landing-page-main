@@ -93,12 +93,13 @@ $DefaultFontSize: 18px;
 */
 
 * { 
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   overflow-x: hidden;
   font-family: 'Barlow', sans-serif;
 
 }
+
 
 .App { 
   padding: 0;
@@ -107,8 +108,89 @@ $DefaultFontSize: 18px;
   font-family: 'Barlow', sans-serif;
   width: 100vw;
 
+  .Section0 { 
+    position: relative;
+    &__Header {
+      &--Img { 
+        width: 100vw;
+        position: relative;
+        z-index: 0;
+      } 
+      
+    }
+
+    &__Intro { 
+      position: absolute;
+      z-index: 30;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20%;
+      height: 80%;
+
+      &--Text { 
+        font-size: 50px;
+        font-family: 'Fraunces', serif;
+        color: $White;
+        letter-spacing: 10px;
+      }
+
+      &--Arrow { 
+        width: 30px;
+      }
+    }
+
+    &__Nav {
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+       top: 2%;
+       position: absolute;
+       z-index: 20;
+
+       &__Text { 
+        
+        color: $White;
+        font-weight: 800;
+        font-size: 25px;
+        margin-left: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       &__Menu { 
+        
+        width: 40%;
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        color: $White;
+        margin-right: 2%;
+
+          .contact { 
+            border-radius: 2rem;
+            padding: 2.5%;
+            background-color: $White;
+            color: $VeryDarkBlue;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+          }
+
+        &:hover { 
+          cursor: pointer;
+        }
+       }  
+
+       
+    }
+  }
+
   .Section1, .Section2{ 
-    margin-top: -3px;
+    margin-top: -4px;
     padding: 0;
     display: flex;
     width: 100%;
@@ -181,7 +263,7 @@ $DefaultFontSize: 18px;
   }
 
   .Section3 { 
-    margin-top: -3px;
+    margin-top: -4px;
     display: flex;
 
     &__Graphic { 
@@ -265,7 +347,7 @@ $DefaultFontSize: 18px;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    margin-top: -3px;
+    margin-top: -4px;
 
     &__Title { 
       color: $GrayishBlue;
@@ -324,7 +406,7 @@ $DefaultFontSize: 18px;
   }
 
   .Section5 { 
-    margin-top: -3px;
+    margin-top: -4px;
     display: flex;  
     img { 
       width: 100%;
@@ -332,7 +414,7 @@ $DefaultFontSize: 18px;
   }
 
   .Section6 { 
-    margin-top: -3px;
+    margin-top: -4px;
     background-color:$DarkModerateCyan;
     display: flex;
     flex-direction: column;
@@ -375,38 +457,357 @@ $DefaultFontSize: 18px;
       }
     }
   }
+
 }
 
 
-@media screen and (max-width: 1100px) {
-  .Section3 { 
-    &__Graphic, &__Photo { 
-
-      &--Text { 
-
-        &--Title { 
-          font-size: 20px !important; 
-        }
-
-        &--Body { 
-          font-size: 13px !important;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 880px) { 
+@media screen and (max-width: 1100px) { 
 
  .Section1, .Section2 { 
     &__Text { 
-      border: 2px solid blue;
 
       &--Title { 
         width: 95% !important; 
         font-size: 30px !important;
         margin-left: 5px;
+        text-align: center;
+      }
+
+      &--Body{ 
+        margin-bottom: 4% !important;
+        width: 70% !important;
+      }
+
+      &--Button { 
+        width: 70% !important;
       }
     }
  }
+
+ .Section3 { 
+
+  &__Graphic, &__Photo { 
+
+      
+      &--Text { 
+        width: 95% !important;
+        top: 60% !important;
+        left: 0% !important;
+        
+        &--Title { 
+          font-size: 20px !important; 
+          width: 95% !important;
+          text-align: center !important;
+        }
+
+        &--Body { 
+          font-size: 13px !important;
+          width: 90% !important;
+        }
+      }
+    }
+ }
+
+ .Section4{ 
+  &__Title { 
+    margin-top: 10% !important;
+    
+  }
+   &__Client { 
+    justify-content: space-around !important;
+
+    &--Emily, &--Thomas, &--Jennie {
+   
+      width: 30% !important;
+      height: 300px !important;
+      justify-content: space-around !important;
+
+      &--Img {
+        margin-bottom: 0% !important;
+      }
+
+      &--Body{ 
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        margin-bottom: 0% !important;
+      }
+
+      &--Name { 
+        margin-bottom: 0%;
+      }
+      
+    }
+
+    
+   }
+ }
+}
+
+@media screen and (max-width: 730px) { 
+  .Section1, .Section2 { 
+    &__Text { 
+
+      &--Title { 
+        width: 95% !important; 
+        font-size: 25px !important;
+        text-align: center;
+      }
+
+      &--Body{ 
+        margin-bottom: 4% !important;
+        width: 90% !important;
+        margin-bottom: 10% !important;
+      }
+
+      &--Button { 
+        width: 90% !important;
+      }
+    }
+ }
+
+ .Section3 { 
+
+  &__Graphic, &__Photo { 
+
+      
+      &--Text { 
+        width: 100% !important;
+        top: 55% !important;
+                
+        &--Title {
+          width: 100% !important;
+        }
+      }
+    }
+ }
+
+ .Section4{ 
+  &__Title { 
+    margin-top: 10% !important;
+    margin-bottom: 40px !important;
+    
+  }
+   &__Client { 
+    flex-direction: column;
+    margin-bottom: 100px !important;
+    
+
+    &--Emily, &--Thomas, &--Jennie {
+      width: 300px !important;
+      height: 300px !important;
+      justify-content: center !important;
+
+      &--Img {
+        margin-bottom: 25px !important;
+      }
+
+      &--Body{ 
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        margin-bottom: 25px !important;
+      }
+
+      &--Name { 
+        margin-bottom: 10px !important;
+        font-size: 17px !important;
+      }
+
+      &--Job { 
+        font-size: 12px !important;
+      }
+      
+    }
+   }
+ }
+
+ .Section5 { 
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+
+  picture{ 
+    display: flex;
+  }
+  img{ 
+    width: 50vw !important;
+  }
+ }
+ 
+}
+
+@media screen and (max-width: 670px) { 
+  .Section1, .Section2 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__Text { 
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  .Section1 { 
+    flex-direction: column-reverse; 
+
+    
+  }
+
+  .Section3 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__Graphic, &__Photo { 
+      
+      picture { 
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) { 
+  .Section1, .Section2 { 
+    justify-content: center !important;
+
+    &__Pic { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__Img { 
+      width: 80% !important;
+    }
+   
+    &__Text { 
+      width: 80% !important;
+    }
+  }
+
+  .Section3 { 
+    &__Graphic, &__Photo { 
+      width: 80% !important;
+    }
+  }
+
+  .Section4 {
+    &__Client { 
+      &--Emily, &--Thomas, &--Jennie{ 
+        width: 75% !important;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 450px) { 
+  .Section0 { 
+    height: 100vh !important;
+  }
+  .Section1, .Section2 { 
+    &__Img { 
+      width: 100% !important;
+    }
+   
+    &__Text { 
+      width: 100% !important;
+    }
+  }
+
+  .Section3 { 
+    &__Graphic, &__Photo { 
+      width: 100% !important;
+      &--Text { 
+        width: 95% !important;
+        top: 70% !important;
+        left: 0% !important;
+        
+        &--Title { 
+          font-size: 30px !important; 
+          width: 95% !important;
+          text-align: center !important;
+        }
+
+        &--Body { 
+          font-size: 12px !important;
+          width: 95% !important;
+        }
+      }
+    }
+  }
+
+  .Section4 { 
+    &__Title { 
+      width: 100% !important;
+      font-size: 16px !important;
+      text-align: center !important;
+    }
+    &__Client { 
+    justify-content: space-around !important;
+
+    &--Emily, &--Thomas, &--Jennie {
+   
+      width: 80% !important;
+      height: 300px !important;
+      justify-content: space-around !important;
+
+      &--Img {
+        margin-bottom: 0% !important;
+      }
+
+      &--Body{ 
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        margin-bottom: 0% !important;
+      }
+
+      &--Name { 
+        margin-bottom: 0%;
+      }
+      
+      &--Job { 
+        font-size: 14px !important;
+      }
+    }
+
+    
+   }
+  }
+}
+
+@media screen and (min-width: 2000px) { 
+
+  .App { 
+    display: flex;
+    flex-direction: column;
+    width: 100vw !important;
+    align-items: center;
+    .Section1, .Section2 { 
+      width: 2000px !important;
+    }
+    
+    .Section3{ 
+      width: 2000px !important;
+    }
+
+    .Section4 {
+      width: 2000px !important;
+    }
+    
+
+    .Section5 { 
+      width: 2000px !important;
+    }
+
+    .Section6 { 
+      width: 2000px !important;
+    }
+  }
+    
 }
