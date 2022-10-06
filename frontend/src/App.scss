@@ -107,12 +107,15 @@ $DefaultFontSize: 18px;
   position: relative;
   font-family: 'Barlow', sans-serif;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .Section0 { 
     position: relative;
     &__Header {
       &--Img { 
-        width: 100vw;
+        width: 100%;
         position: relative;
         z-index: 0;
       } 
@@ -121,7 +124,7 @@ $DefaultFontSize: 18px;
 
     &__Intro { 
       position: absolute;
-      z-index: 30;
+      z-index: 10;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -178,13 +181,23 @@ $DefaultFontSize: 18px;
             color: $VeryDarkBlue;
             font-family: 'Fraunces', serif;
             font-weight: 700;
+
+            &:hover { 
+              background-color: rgba(255, 255, 255, 0.452);
+              color: $White;
+            }
           }
 
         &:hover { 
           cursor: pointer;
         }
+
        }  
 
+        
+        &__MenuMini { 
+          display: none;
+         }
        
     }
   }
@@ -420,6 +433,7 @@ $DefaultFontSize: 18px;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    width: 100%;
 
     &__Title { 
       color: $DarkSaturatedCyan;
@@ -462,6 +476,21 @@ $DefaultFontSize: 18px;
 
 
 @media screen and (max-width: 1100px) { 
+
+  .Section0 { 
+    &__Intro {
+      &--Text { 
+        font-size: 30px !important;
+      }
+    }
+
+    &__Nav { 
+      &__MenuMini { 
+        display: none;
+       }
+    }
+  }
+ 
 
  .Section1, .Section2 { 
     &__Text { 
@@ -543,7 +572,41 @@ $DefaultFontSize: 18px;
  }
 }
 
+
 @media screen and (max-width: 730px) { 
+  .Section0 { 
+    width: 100% !important;
+    &__Nav { 
+      width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: start;
+      &__Text { 
+        position: relative;
+      }
+      &__Menu {
+        left: 30%;
+        position: absolute;
+      }
+
+      &__MenuMini { 
+        display: block !important;
+      }
+    }
+
+    &__Intro { 
+      gap: 10% !important;
+      top: 5%;
+      &--Text { 
+        font-size: 25px !important;
+        text-align: center;
+      }
+
+      &--Arrow { 
+        width: 3.5% !important;
+      }
+    }
+  }
   .Section1, .Section2 { 
     &__Text { 
 
@@ -636,16 +699,43 @@ $DefaultFontSize: 18px;
  
 }
 
-@media screen and (max-width: 670px) { 
+@media screen and (max-width: 650px) { 
+  .Section0 { 
+    width: 100% !important;
+    &__Intro { 
+      gap: 20% !important;
+      top: 12%;
+      &--Text { 
+        font-size: 25px !important;
+        text-align: center;
+      }
+
+      &--Arrow { 
+        width: 30px !important;
+      }
+    }
+  }
   .Section1, .Section2 { 
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    &__Pic { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__Img { 
+      width: 100% !important;
+    }
+    
+
     &__Text { 
       margin-top: 30px;
       margin-bottom: 30px;
       text-align: center;
+      width: 100% !important;
     }
   }
 
@@ -661,6 +751,8 @@ $DefaultFontSize: 18px;
     align-items: center;
 
     &__Graphic, &__Photo { 
+
+      width: 100% !important;
       
       picture { 
         display: flex;
@@ -668,47 +760,27 @@ $DefaultFontSize: 18px;
       }
     }
   }
-}
-
-
-@media screen and (max-width: 500px) { 
-  .Section1, .Section2 { 
-    justify-content: center !important;
-
-    &__Pic { 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__Img { 
-      width: 80% !important;
-    }
-   
-    &__Text { 
-      width: 80% !important;
-    }
-  }
-
-  .Section3 { 
-    &__Graphic, &__Photo { 
-      width: 80% !important;
-    }
-  }
 
   .Section4 {
     &__Client { 
       &--Emily, &--Thomas, &--Jennie{ 
-        width: 75% !important;
+        width: 80% !important;
       }
     }
   }
-  
 }
+
 
 @media screen and (max-width: 450px) { 
   .Section0 { 
-    height: 100vh !important;
+    width: 100% !important; 
+    &__Intro { 
+      top: 10%;
+      &--Text { 
+        font-size: 30px !important;
+        text-align: center;
+      }
+    }
   }
   .Section1, .Section2 { 
     &__Img { 

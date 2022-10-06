@@ -12,6 +12,7 @@ function Section0() {
                 <li className='Nav__Menu__Items'>Projects</li>
                 <li className='Nav__Menu__Items contact'>CONTACT</li>
             </ul>
+            <img className='Section0__Nav__MenuMini' src="images/icon-hamburger.svg" />
         </nav>
 
         <div className='Section0__Intro'>
@@ -19,8 +20,8 @@ function Section0() {
           <img className='Section0__Intro--Arrow' alt='arrow down' src='images/icon-arrow-down.svg' />
         </div>
         <picture className='Section0__Header'>
-            <source className='Section0__Header--Img' media='(max-width: 450px)' srcset="images/mobile/image-header.jpg" />
-            <img className='Section0__Header--Img' src="images/desktop/image-header.jpg" alt="header image" />
+            <source className='Section0__Header--Img' media='(max-width: 650px)' srcset="images/mobile/image-header.jpg" />
+            <img className='Section0__Header--Img' src="images/desktop/image-header.jpg" alt="header" />
         </picture>
     </div>
   )
