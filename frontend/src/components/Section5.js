@@ -3,7 +3,6 @@ import React from 'react'
 function Section5() {
   return (
     <div className='Section5'>
-
         <picture className='Section5__Gallery'>
           <source className="Section5__Gallery--Img" media="(max-width: 450px)" srcset="images/mobile/image-gallery-milkbottles.jpg" alt="Gallery milkbottles " />
           <img className="Section5__Gallery--Img" src="images/desktop/image-gallery-milkbottles.jpg" alt="graphic design" />
@@ -20,7 +19,7 @@ function Section5() {
         </picture>
 
         <picture className='Section5__Gallery'>
-          <source className="Section5__Gallery--Img" media="(max-width: 450px)" srcset="images/mobile/image-gallery-sugarcubes.jpg" alt="Gallery sugar cubes " />
+          <source className="Section5__Gallery--Img" media="(max-width: 450px)" srcset="images/mobile/image-gallery-sugar-cubes.jpg" alt="Gallery sugar cubes " />
           <img className="Section5__Gallery--Img" src="images/desktop/image-gallery-sugarcubes.jpg" alt="graphic design" />
         </picture>
 

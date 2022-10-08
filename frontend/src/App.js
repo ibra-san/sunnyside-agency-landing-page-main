@@ -1,4 +1,5 @@
 import './App.scss';
+import Section0 from './components/Section0';
 import Section1 from './components/Section1';
 import Section2 from './components/Section2';
 import Section3 from './components/Section3';
@@ -9,6 +10,8 @@ import Section6 from './components/Section6';
 function App() {
   return (
     <div className="App" id="App">
+
+      <Section0 /> {/* This section contains the navbar and its content */}
 
       <Section1 /> {/* Section 1 transform your brand section */} 
 

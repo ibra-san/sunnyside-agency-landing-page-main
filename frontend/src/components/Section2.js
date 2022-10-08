@@ -3,7 +3,7 @@ import React from 'react'
 function Section2() {
   return (
     <section className='Section2'>
-       <picture>
+       <picture className='Section2__Pic'>
         <source className="Section2__Img" media="(max-width: 450px)" srcset="images/mobile/image-stand-out.jpg" alt="Stand Out" />
         <img className="Section2__Img" src="images/desktop/image-stand-out.jpg" alt="Stand Out" />
       </picture>
